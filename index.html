@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Link Generator By Earl</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #FFD700, #8f94fb);
+            color: white;
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .input-container {
+            margin-bottom: 15px;
+        }
+        input, textarea, button {
+            width: 80%;
+            max-width: 400px;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+        textarea {
+            resize: none;
+            height: 100px;
+            overflow-y: auto;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #generated-link-container {
+            display: none;
+            margin-top: 20px;
+        }
+        .link-display {
+            background: #ffffff;
+            color: #000;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: nowrap; /* Tambahkan ini untuk elakkan baris kedua */
+        }
+        #copy-btn {
+            margin-top: 10px;
+            background-color: #007bff;
+        }
+        #copy-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Earl WhatsApp Link Generator</h1>
+    <div class="input-container">
+        <textarea id="message" placeholder="Enter your optional message..."></textarea>
+    </div>
+    <div class="input-container">
+        <input type="text" id="number" placeholder="Enter WhatsApp number">
+    </div>
+    <button onclick="generateLink()">Generate Link</button>
+
+    <div id="generated-link-container">
+        <div class="link-display" id="generated-link"></div>
+        <button id="copy-btn" onclick="copyLink()">Copy Link</button>
+    </div>
+
+    <script src="link.js"></script>
+</body>
+</html>
